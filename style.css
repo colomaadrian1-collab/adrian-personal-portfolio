@@ -1,0 +1,185 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #333333;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+header h1 {
+    font-size: 34px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #dbeafe;
+    font-size: 16px;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #1e3a8a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #3b82f6;
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+/* SECTIONS */
+section {
+    background-color: white;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    scroll-margin-top: 85px;
+}
+
+section h2 {
+    color: #1e3a8a;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 12px;
+    margin-bottom: 22px;
+    font-size: 25px;
+}
+
+section h3 {
+    color: #172554;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 12px;
+}
+
+/* EDUCATIONAL BACKGROUND */
+.education-item {
+    background-color: #f4f6fa;
+    padding: 20px;
+    margin: 18px 0;
+    border-left: 5px solid #3b82f6;
+    border-radius: 6px;
+}
+
+/* SKILLS */
+.skill {
+    background-color: #f4f6fa;
+    padding: 20px;
+    margin: 18px 0;
+    border-left: 5px solid #3b82f6;
+    border-radius: 6px;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+/* JAVA CODE */
+.code-container {
+    background-color: #111827;
+    color: #e5e7eb;
+    padding: 22px;
+    border-radius: 8px;
+    margin-top: 15px;
+    overflow-x: auto;
+}
+
+pre {
+    font-size: 13px;
+    line-height: 1.7;
+    font-family: Consolas, monospace;
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+/* FOOTER */
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    margin-top: 35px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav {
+        position: static;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    section h2 {
+        font-size: 21px;
+    }
+
+    pre {
+        font-size: 11px;
+    }
+}

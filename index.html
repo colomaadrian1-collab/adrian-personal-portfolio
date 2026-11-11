@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Jhay Coloma | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>COLOMA ADRIAN JHAY P.</h1>
+    <p>BSIT-1B | Aspiring Programmer</p>
+    <p>Welcome to my Personal Portfolio</p>
+</header>
+
+<nav>
+    <a href="#personal">Personal Information</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#java">Java Code</a>
+</nav>
+
+<main>
+
+<!-- PERSONAL INFORMATION -->
+<section id="personal">
+    <h2>Personal Information</h2>
+
+    <h3>About Me</h3>
+    <p>
+        Hello! I am Coloma Adrian Jhay P., a Bachelor of
+        Science in Information Technology student.
+        I am interested in technology, programming, and
+        web development. I enjoy learning new things,
+        exploring technology, and improving my skills.
+        My goal is to become a successful IT professional
+        and develop useful applications in the future.
+    </p>
+
+    <h3>Personal Details</h3>
+    <p><strong>Full Name:</strong> Coloma Adrian Jhay P.</p>
+    <p><strong>Course:</strong> Bachelor of Science in Information Technology</p>
+    <p><strong>Section:</strong> BSIT-1B</p>
+    <p><strong>Email:</strong> adrianjhaycoloma408@gmail.com</p>
+    <p><strong>Contact Number:</strong> 09685662368</p>
+</section>
+
+<!-- EDUCATIONAL BACKGROUND -->
+<section id="education">
+    <h2>Educational Background</h2>
+
+    <div class="education-item">
+        <h3>College</h3>
+        <p>Our Lady of the Sacred Heart College of Guimba, Inc.</p>
+        <p>Course: BS Information Technology</p>
+        <p>Section: BSIT-1B</p>
+        <p>Status: Currently Studying</p>
+    </div>
+
+    <div class="education-item">
+        <h3>Senior High School</h3>
+        <p>Bonifacio Luz Natividad Educational Foundation</p>
+        <p>Strand: Humanities and Social Sciences (HUMSS)</p>
+        <p>Graduated: 2026</p>
+    </div>
+
+    <div class="education-item">
+        <h3>Junior High School</h3>
+        <p>Bunol Integrated School</p>
+        <p>Graduated: 2023</p>
+    </div>
+
+    <div class="education-item">
+        <h3>Elementary</h3>
+        <p>Bunol Integrated School</p>
+        <p>Graduated: 2019</p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skill">
+        <h3>Technical Skills</h3>
+        <ul>
+            <li>HTML - Basic Web Development</li>
+            <li>CSS - Basic Website Styling</li>
+            <li>Java - Basic Programming</li>
+            <li>Microsoft Word</li>
+            <li>Microsoft PowerPoint</li>
+        </ul>
+    </div>
+
+    <div class="skill">
+        <h3>Personal Skills</h3>
+        <ul>
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Creativity</li>
+            <li>Willingness to Learn</li>
+            <li>Time Management</li>
+        </ul>
+    </div>
+</section>
+
+<!-- JAVA CODE -->
+<section id="java">
+    <h2>Java Code</h2>
+
+    <h3>Library Shelf Capacity Analyzer</h3>
+
+    <p>
+        This project is developed using Java. It uses a
+        one-dimensional array to store the number of books
+        on 12 library shelves. It calculates the total
+        number of books, counts shelves that are at least
+        90% occupied, and identifies the shelf with the
+        most available space.
+    </p>
+
+    <h3>Source Code</h3>
+
+    <div class="code-container">
+<pre><code>import java.util.Scanner;
+
+public class LibraryShelf {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int[] books = new int[12];
+
+        int total = 0;
+        int occupied = 0;
+        int mostSpace = 0;
+
+        // Input books for 12 shelves
+        for (int i = 0; i < 12; i++) {
+
+            System.out.print(
+                "Enter books for shelf index " + i + ": "
+            );
+
+            books[i] = input.nextInt();
+
+            // Validate input
+            while (books[i] < 0 || books[i] > 100) {
+
+                System.out.print(
+                    "Invalid input! Enter 0-100: "
+                );
+
+                books[i] = input.nextInt();
+            }
+
+            // Calculate total books
+            total = total + books[i];
+
+            // Count shelves at least 90% occupied
+            if (books[i] >= 90) {
+                occupied++;
+            }
+
+            // Find shelf with most available space
+            if (books[i] < books[mostSpace]) {
+                mostSpace = i;
+            }
+        }
+
+        // Display results
+        System.out.println("\n===== SHELF ANALYSIS =====");
+
+        System.out.println(
+            "Total number of books: " + total
+        );
+
+        System.out.println(
+            "Shelves at least 90% occupied: " + occupied
+        );
+
+        System.out.println(
+            "Shelf with most available space (index): "
+            + mostSpace
+        );
+
+        System.out.println(
+            "Available space: "
+            + (100 - books[mostSpace]) + " books"
+        );
+
+        input.close();
+    }
+}</code></pre>
+    </div>
+
+    <h3>Program Explanation</h3>
+
+    <p>
+        The program uses a one-dimensional array to store
+        the number of books on 12 shelves. Scanner accepts
+        user input, while loops validate the values from
+        0 to 100. Conditional statements calculate the
+        total books, count shelves that are at least 90%
+        occupied, and identify the shelf with the most
+        available space.
+    </p>
+
+    <h3>Java Concepts Used</h3>
+    <ul>
+        <li>One-Dimensional Array</li>
+        <li>Scanner</li>
+        <li>For Loop</li>
+        <li>While Loop</li>
+        <li>If Statement</li>
+        <li>Input Validation</li>
+        <li>Arithmetic Operations</li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Coloma Adrian Jhay P.</p>
+    <p>BSIT-1B | Personal Portfolio</p>
+</footer>
+
+</body>
+</html>
